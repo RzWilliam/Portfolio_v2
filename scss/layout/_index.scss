@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(img/bc-3.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+
+    #fp-nav ul li a span, .fp-slidesNav ul li a span{
+        background: white;
+    }
+}
+
+.section{
+
+    &.s1{
+        text-align: center;
+
+        .title{
+            display: inline-block;
+            width: auto;
+            position: relative;
+            top: -100px;
+            opacity: 0;
+            animation: disappear-top 500ms ease-in-out forwards;
+            
+
+            h1{
+                animation: typing 2s .5s steps(22), blink .5s .5s step-end infinite alternate;
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                font-size: 48px;
+                width: 100%;
+                font-weight: 700;
+                white-space: nowrap;
+                overflow: hidden;
+                padding-right: 5px;
+                border-right: 3px solid;
+                @keyframes typing {
+                    from {
+                      width: 0
+                    }
+                  }
+                      
+                @keyframes blink {
+                    50% {
+                      border-color: transparent
+                    }
+                }
+            }
+
+            
+        }
+
+        .img{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+        
+            img{
+                max-width: 150px;
+                max-height: 150px;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                position: relative;
+                opacity: 0;
+
+                &:nth-of-type(1){
+                    left: -300px;
+                    animation: disappear-left 500ms ease-in-out forwards;
+                }
+
+                &:nth-of-type(2){
+                    right: -300px;
+                    animation: disappear-right 500ms ease-in-out forwards;
+                }
+            }
+        }
+
+        .subtitle{
+            position: relative;
+            bottom: -100px;
+            opacity: 0;
+            animation: disappear-bottom 500ms ease-in-out forwards;
+            h2{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                color: white;
+                font-size: 32px;
+            }
+        }
+
+        &.active{
+
+            .title{
+                animation: appear-top 700ms .5s ease-in-out forwards;
+            }
+
+            .img{
+
+                img{
+                    &:nth-of-type(1){ 
+                        animation: appear-left 700ms .5s ease-in-out forwards;
+                    }
+
+                    &:nth-of-type(2){
+                        animation: appear-right 700ms .5s ease-in-out forwards;
+                    }
+                }
+            } 
+
+            .subtitle{
+                animation: appear-bottom 700ms .5s ease-in-out forwards;
+            }
+            
+        }
+    }
+
+    &.s2{
+        text-align: center;
+        color: white;
+    }
+
+}
+
+@keyframes appear-top {
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes appear-bottom{
+    to{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes appear-left {
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes appear-right {
+    to{
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes disappear-top {
+    from{
+        top: 0;
+        opacity: 1;
+    }
+
+}
+
+@keyframes disappear-bottom {
+    from{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear-left {
+    from{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear-right {
+    from{
+        right: 0;
+        opacity: 1;
+    }
+}
