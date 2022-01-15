@@ -70,11 +70,11 @@ body ul {
 }
 .section.s1 .img img:nth-of-type(1) {
   left: -300px;
-  animation: disappear-left 500ms ease-in-out forwards;
+  animation: disappear-left 700ms ease-in-out forwards;
 }
 .section.s1 .img img:nth-of-type(2) {
   right: -300px;
-  animation: disappear-right 500ms ease-in-out forwards;
+  animation: disappear-right 700ms ease-in-out forwards;
 }
 .section.s1 .subtitle {
   position: relative;
@@ -92,10 +92,10 @@ body ul {
   animation: appear-top 700ms 0.5s ease-in-out forwards;
 }
 .section.s1.active .img img:nth-of-type(1) {
-  animation: appear-left 700ms 0.5s ease-in-out forwards;
+  animation: appear-left 1000ms 0.5s ease-in-out forwards;
 }
 .section.s1.active .img img:nth-of-type(2) {
-  animation: appear-right 700ms 0.5s ease-in-out forwards;
+  animation: appear-right 1000ms 0.5s ease-in-out forwards;
 }
 .section.s1.active .subtitle {
   animation: appear-bottom 700ms 0.5s ease-in-out forwards;
@@ -326,6 +326,80 @@ body ul {
     transform: scale(1);
     opacity: 1;
   }
+}
+.burger {
+  cursor: pointer;
+  position: fixed;
+  top: 50px;
+  right: 90px;
+  gap: 10px;
+  display: flex;
+  z-index: 6;
+  transition: 0.4s;
+}
+.burger div {
+  border-radius: 25px;
+  height: 30px;
+  background-color: white;
+  width: 3px;
+  transition: 0.4s;
+}
+.burger div:nth-of-type(2) {
+  height: 40px;
+}
+.burger:hover div {
+  background-color: #ff7d25;
+  height: 40px;
+}
+.burger:hover div:nth-of-type(2) {
+  height: 30px;
+}
+.burger.active div {
+  height: 50px;
+}
+.burger.active div:nth-of-type(1) {
+  transform: translateY(12px) rotate(135deg) translateX(-24px);
+}
+.burger.active div:nth-of-type(2) {
+  transform: scale(0);
+}
+.burger.active div:nth-of-type(3) {
+  transform: translateY(2.5px) rotate(-135deg) translateX(10px);
+}
+
+.container_burger {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  transition: 0.5s;
+  background-color: #161648;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+.container_burger div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  margin: auto;
+}
+.container_burger div img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+.container_burger div img:hover {
+  opacity: 0.6;
+}
+.container_burger.active {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
