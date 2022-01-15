@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,9 @@ body {
 body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
   background: white;
 }
+body ul {
+  text-align: center;
+}
 
 .section.s1 {
   text-align: center;
@@ -29,7 +33,7 @@ body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
 }
 .section.s1 .title h1 {
   animation: typing 2s 0.5s steps(22), blink 0.5s 0.5s step-end infinite alternate;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 48px;
   width: 100%;
@@ -37,7 +41,7 @@ body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
   white-space: nowrap;
   overflow: hidden;
   padding-right: 5px;
-  border-right: 3px solid;
+  border-right: 3px solid white;
 }
 @keyframes typing {
   from {
@@ -79,7 +83,7 @@ body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
   animation: disappear-bottom 500ms ease-in-out forwards;
 }
 .section.s1 .subtitle h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: white;
   font-size: 32px;
@@ -99,6 +103,168 @@ body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
 .section.s2 {
   text-align: center;
   color: white;
+}
+.section.s3.fp-section {
+  overflow: hidden;
+  display: flex;
+}
+.section.s3.fp-section h2 {
+  font-size: 48px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 5% 0;
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  animation: disappear-top 500ms ease-in-out forwards;
+}
+.section.s3.fp-section section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.section.s3.fp-section section .project-card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid white;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: descale 500ms ease-in-out forwards;
+}
+.section.s3.fp-section section .project-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 150px;
+  object-position: center;
+  object-fit: cover;
+  border-bottom: 1px solid white;
+}
+.section.s3.fp-section section .project-card .desc {
+  width: 100%;
+  padding: 10px 10px 50px;
+  height: 100%;
+  position: relative;
+}
+.section.s3.fp-section section .project-card .desc h3 {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+.section.s3.fp-section section .project-card .desc p {
+  color: white;
+  margin: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+.section.s3.fp-section section .project-card .desc img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-position: center;
+  object-fit: cover;
+  right: 10px;
+  bottom: 10px;
+  border: none;
+  transition: 0.3s;
+}
+.section.s3.fp-section section .project-card .desc img:hover {
+  opacity: 0.6;
+}
+.section.s3.fp-section.active h2 {
+  animation: appear-top 700ms 0.5s ease-in-out forwards;
+}
+.section.s3.fp-section.active .project-card {
+  animation: scale 700ms 0.5s ease-in-out forwards;
+  transform: scale(0.8);
+}
+.section.s4 .skills {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.section.s4 .skills .container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+}
+.section.s4 .skills .container h2 {
+  margin-bottom: 15px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.section.s4 .skills .container .box {
+  width: 100%;
+  border: 2px solid white;
+  padding: 15px 0;
+  border-radius: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.section.s4 .skills .container .box .logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.section.s4 .skills .container .box .logo img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+}
+.section.s4 .skills .container .box .logo p {
+  position: absolute;
+  top: 50%;
+  color: white;
+  left: 50%;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.section.s4 .skills .container .box .logo.reverse img {
+  opacity: 0.2;
+}
+.section.s4 .skills .container .box .logo.reverse p {
+  opacity: 1;
+}
+.section.s4 .skills .container.front {
+  left: -200px;
+  animation: disappear-left 500ms ease-in-out forwards;
+}
+.section.s4 .skills .container.back {
+  right: -200px;
+  animation: disappear-right 500ms ease-in-out forwards;
+}
+.section.s4 .skills .container.others {
+  bottom: -100px;
+  animation: disappear-bottom 500ms ease-in-out forwards;
+}
+.section.s4.active .skills .container.front {
+  animation: appear-left 1000ms 0.3s ease-in-out forwards;
+}
+.section.s4.active .skills .container.back {
+  animation: appear-right 1000ms 0.3s ease-in-out forwards;
+}
+.section.s4.active .skills .container.others {
+  animation: appear-bottom 1000ms 0.3s ease-in-out forwards;
 }
 
 @keyframes appear-top {
@@ -146,6 +312,18 @@ body #fp-nav ul li a span, body .fp-slidesNav ul li a span {
 @keyframes disappear-right {
   from {
     right: 0;
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes descale {
+  from {
+    transform: scale(1);
     opacity: 1;
   }
 }
