@@ -153,8 +153,72 @@ body{
     }
 
     &.s2{
-        text-align: center;
-        color: white;
+        position: relative;
+
+        .part-1{
+            position: absolute;
+            width: 40%;
+            top: 10%;
+            left: 5%;
+            margin: 0;
+            border-left: 2px solid palevioletred;
+            padding-left: 20px;
+
+            .side{
+                position: relative;
+                opacity: 0;
+                right: -200px;
+                animation: disappear-right  500ms ease-in-out forwards;
+            }
+        }
+
+        .part-3{
+            width: 40%;
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            margin: 0;
+            padding-left: 20px;
+            border-left: 2px solid palevioletred;
+
+            .side{
+                position: relative;
+                opacity: 0;
+                right: -200px;
+                animation: disappear-right  500ms ease-in-out forwards;
+            }
+        }
+        
+        .side{
+            color: white;
+            font-family: $font;
+
+            h2{
+                margin-bottom: 15px;
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            
+        }
+
+        &.active{
+            .part-1{
+                .side{
+                    animation: appear-right 1000ms .5s ease-in-out forwards;  
+                }
+            }
+
+            .part-3{
+                .side{
+                    animation: appear-right 1000ms .5s ease-in-out forwards;  
+                }
+            }
+        }
     }
 
 

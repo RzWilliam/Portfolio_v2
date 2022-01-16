@@ -129,8 +129,56 @@ body ul {
   animation: appear-bottom 700ms 0.5s ease-in-out forwards;
 }
 .section.s2 {
-  text-align: center;
+  position: relative;
+}
+.section.s2 .part-1 {
+  position: absolute;
+  width: 40%;
+  top: 10%;
+  left: 5%;
+  margin: 0;
+  border-left: 2px solid palevioletred;
+  padding-left: 20px;
+}
+.section.s2 .part-1 .side {
+  position: relative;
+  opacity: 0;
+  right: -200px;
+  animation: disappear-right 500ms ease-in-out forwards;
+}
+.section.s2 .part-3 {
+  width: 40%;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 2px solid palevioletred;
+}
+.section.s2 .part-3 .side {
+  position: relative;
+  opacity: 0;
+  right: -200px;
+  animation: disappear-right 500ms ease-in-out forwards;
+}
+.section.s2 .side {
   color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.section.s2 .side h2 {
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.section.s2 .side p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.section.s2.active .part-1 .side {
+  animation: appear-right 1000ms 0.5s ease-in-out forwards;
+}
+.section.s2.active .part-3 .side {
+  animation: appear-right 1000ms 0.5s ease-in-out forwards;
 }
 .section.s3.fp-section {
   overflow: hidden;
