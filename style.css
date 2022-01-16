@@ -472,11 +472,21 @@ body ul {
   cursor: pointer;
   position: fixed;
   top: 5%;
-  right: 8%;
+  right: 5%;
   gap: 10px;
   display: flex;
   z-index: 6;
   transition: 0.4s;
+}
+@media screen and (max-width: 1550px) {
+  .burger {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .burger {
+    right: 8%;
+  }
 }
 .burger div {
   border-radius: 25px;

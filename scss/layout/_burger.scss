@@ -2,11 +2,19 @@
     cursor: pointer;
     position: fixed;
     top: 5%;
-    right: 8%;
+    right: 5%;
     gap: 10px;
     display: flex;
     z-index: 6;
     transition: .4s;
+
+    @include pc1550{
+        right: 6%;
+    }
+
+    @include tab{
+        right: 8%;
+    }
 
     div{
         border-radius: 25px;
