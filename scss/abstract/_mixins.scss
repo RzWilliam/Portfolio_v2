@@ -1,0 +1,30 @@
+@mixin pc1550 {
+    @media screen and (max-width:1550px) {
+        @content;
+    }
+}
+
+@mixin  tab{
+    @media screen and (max-width:920px) {
+        @content;
+    }
+}
+
+@mixin  tab810{
+    @media screen and (max-width:810px) {
+        @content;
+    }
+}
+
+@mixin  mobile500{
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+@mixin  mobile400{
+    @media screen and (max-width:400px) {
+        @content;
+    }
+}
+

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.4s;
 }
 
 body {
@@ -43,6 +44,17 @@ body ul {
   padding-right: 5px;
   border-right: 3px solid white;
 }
+@media screen and (max-width: 500px) {
+  .section.s1 .title h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section.s1 .title h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
@@ -68,6 +80,12 @@ body ul {
   position: relative;
   opacity: 0;
 }
+@media screen and (max-width: 500px) {
+  .section.s1 .img img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
 .section.s1 .img img:nth-of-type(1) {
   left: -300px;
   animation: disappear-left 700ms ease-in-out forwards;
@@ -87,6 +105,16 @@ body ul {
   font-weight: 500;
   color: white;
   font-size: 32px;
+}
+@media screen and (max-width: 500px) {
+  .section.s1 .subtitle h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section.s1 .subtitle h2 {
+    font-size: 20px;
+  }
 }
 .section.s1.active .title {
   animation: appear-top 700ms 0.5s ease-in-out forwards;
@@ -109,7 +137,7 @@ body ul {
   display: flex;
 }
 .section.s3.fp-section h2 {
-  font-size: 48px;
+  font-size: 40px;
   color: white;
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -119,6 +147,18 @@ body ul {
   opacity: 0;
   animation: disappear-top 500ms ease-in-out forwards;
 }
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section h2 {
+    font-size: 30px;
+    margin: 10% 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section.s3.fp-section h2 {
+    font-size: 24px;
+    margin: 20% 0;
+  }
+}
 .section.s3.fp-section section {
   display: flex;
   justify-content: space-evenly;
@@ -127,6 +167,17 @@ body ul {
   align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 1550px) {
+  .section.s3.fp-section section {
+    width: 90%;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .section.s3.fp-section section {
+    gap: 30px;
+  }
 }
 .section.s3.fp-section section .project-card {
   width: 400px;
@@ -138,6 +189,19 @@ body ul {
   transform: scale(0.8);
   animation: descale 500ms ease-in-out forwards;
 }
+@media screen and (max-width: 920px) {
+  .section.s3.fp-section section .project-card {
+    width: 80%;
+    flex-direction: row;
+    border-width: 3px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section section .project-card {
+    width: 100%;
+    max-height: 135px;
+  }
+}
 .section.s3.fp-section section .project-card img {
   width: 100%;
   height: 100%;
@@ -146,11 +210,30 @@ body ul {
   object-fit: cover;
   border-bottom: 1px solid white;
 }
+@media screen and (max-width: 1550px) {
+  .section.s3.fp-section section .project-card img {
+    max-height: 100px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .section.s3.fp-section section .project-card img {
+    width: 30%;
+    max-height: none;
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid white;
+  }
+}
 .section.s3.fp-section section .project-card .desc {
   width: 100%;
   padding: 10px 10px 50px;
   height: 100%;
   position: relative;
+}
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section section .project-card .desc {
+    padding: 15px;
+  }
 }
 .section.s3.fp-section section .project-card .desc h3 {
   text-align: center;
@@ -159,11 +242,33 @@ body ul {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
 }
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section section .project-card .desc h3 {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section.s3.fp-section section .project-card .desc h3 {
+    font-size: 20px;
+  }
+}
 .section.s3.fp-section section .project-card .desc p {
   color: white;
   margin: 10px;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section section .project-card .desc p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section.s3.fp-section section .project-card .desc p {
+    font-size: 14px;
+  }
 }
 .section.s3.fp-section section .project-card .desc img {
   position: absolute;
@@ -175,6 +280,13 @@ body ul {
   bottom: 10px;
   border: none;
   transition: 0.3s;
+}
+@media screen and (max-width: 500px) {
+  .section.s3.fp-section section .project-card .desc img {
+    width: 33px;
+    height: 33px;
+    top: 10px;
+  }
 }
 .section.s3.fp-section section .project-card .desc img:hover {
   opacity: 0.6;
@@ -192,12 +304,35 @@ body ul {
   flex-wrap: wrap;
   gap: 50px;
 }
+@media screen and (max-width: 810px) {
+  .section.s4 .skills {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section.s4 .skills {
+    gap: 40px;
+  }
+}
 .section.s4 .skills .container {
   width: 40%;
   display: flex;
   flex-direction: column;
   position: relative;
   opacity: 0;
+}
+@media screen and (max-width: 810px) {
+  .section.s4 .skills .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section.s4 .skills .container {
+    width: 90%;
+  }
 }
 .section.s4 .skills .container h2 {
   margin-bottom: 15px;
@@ -226,6 +361,12 @@ body ul {
   object-fit: cover;
   object-position: center;
   transition: 0.5s;
+}
+@media screen and (max-width: 500px) {
+  .section.s4 .skills .container .box .logo img {
+    max-height: 50px;
+    max-width: 75px;
+  }
 }
 .section.s4 .skills .container .box .logo p {
   position: absolute;
@@ -330,8 +471,8 @@ body ul {
 .burger {
   cursor: pointer;
   position: fixed;
-  top: 50px;
-  right: 90px;
+  top: 5%;
+  right: 8%;
   gap: 10px;
   display: flex;
   z-index: 6;
@@ -378,6 +519,17 @@ body ul {
   z-index: 5;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 920px) {
+  .container_burger {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container_burger {
+    width: 50%;
+    right: -50%;
+  }
 }
 .container_burger div {
   display: flex;
