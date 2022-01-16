@@ -174,12 +174,12 @@ body{
             animation: disappear-top 500ms ease-in-out forwards;
             @include mobile500{
                 font-size: 30px;
-                margin: 10% 0;
+                margin: 10% 0 20%;
             }
 
             @include mobile400{
                 font-size: 24px;
-                margin: 20% 0;
+                margin: 20% 0 30%;
             }
         }
 
